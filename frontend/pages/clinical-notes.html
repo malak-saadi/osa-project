@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clinical Notes – OSA Monitor</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/patient-profile.css">
+  <link rel="stylesheet" href="../css/clinical-notes.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-icon">♥</div>
+    <div class="brand-text">
+      <div class="brand-name">OSA Monitor</div>
+      <div class="brand-sub">Sleep Analytics v2.4</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <a class="nav-item" href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a>
+    <a class="nav-item" href="apnea-detection.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Apnea Detection</a>
+    <a class="nav-item" href="sleep-history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Sleep History</a>
+    <a class="nav-item active" href="patient-profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>Patient Profile</a>
+    <a class="nav-item" href="settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+  </nav>
+  <div class="sidebar-footer">
+    <button class="export-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Export Data</button>
+  </div>
+</aside>
+
+<div class="main">
+  <header class="topbar">
+    <div class="breadcrumb">
+      <a href="patient-profile.html" class="bc-link">Patients List</a>
+      <span class="bc-sep">›</span>
+      <span class="bc-current">Johnathan Doe</span>
+    </div>
+    <div class="ml-auto"><div class="avatar">JD</div></div>
+  </header>
+
+  <div class="content">
+
+    <!-- Patient Header -->
+    <div class="patient-header">
+      <div class="patient-info">
+        <div class="patient-avatar">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <div class="patient-details">
+          <div class="patient-name-row">
+            <h1 class="patient-name">Johnathan Doe</h1>
+            <span class="active-badge">ACTIVE</span>
+          </div>
+          <div class="patient-meta"><span>ID: #88291-JD</span><span>Sleep Apnea Type II</span></div>
+          <div class="patient-sub">Last clinical visit: Oct 24, 2023 • Managed by Dr. Sarah Chen</div>
+        </div>
+      </div>
+      <div class="patient-actions">
+        <button class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+          Export Medical Report
+        </button>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab" onclick="location.href='health-monitoring.html'">Health Monitoring</button>
+      <button class="tab" onclick="location.href='patient-profile.html'">Device Sync</button>
+      <button class="tab active" onclick="location.href='clinical-notes.html'">Clinical Notes</button>
+      <button class="tab" onclick="location.href='account-settings.html'">Account Settings</button>
+    </div>
+
+    <!-- Content -->
+    <div class="cn-layout">
+
+      <!-- Notes List -->
+      <div class="cn-left">
+        <div class="cn-toolbar">
+          <input class="cn-search" type="text" placeholder="Search notes..." id="noteSearch">
+          <button class="btn-primary" id="addNoteBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add Note
+          </button>
+        </div>
+        <div class="cn-notes-list" id="notesList"></div>
+      </div>
+
+      <!-- Note Detail -->
+      <div class="cn-right">
+        <div class="cn-detail" id="noteDetail">
+          <div class="cn-detail-header">
+            <div>
+              <div class="cn-detail-title" id="detailTitle">Follow-up Visit – Oct 24, 2023</div>
+              <div class="cn-detail-meta" id="detailMeta">Dr. Sarah Chen • Cardiology</div>
+            </div>
+            <div class="cn-detail-actions">
+              <button class="btn-outline">Edit</button>
+              <button class="btn-outline danger-outline">Delete</button>
+            </div>
+          </div>
+          <div class="cn-detail-body" id="detailBody">
+            Patient reported improved sleep quality since last CPAP adjustment. AHI has decreased from 12.4 to 4.2 over the past 3 weeks. SpO2 saturation remains stable at 97-98% throughout the night.
+
+Recommendations:
+• Continue current CPAP pressure settings (8-12 cmH2O)
+• Schedule follow-up in 6 weeks
+• Monitor for mask leak events
+• Patient should maintain sleep diary
+
+Next appointment scheduled for Dec 5, 2023.
+          </div>
+          <div class="cn-tags">
+            <span class="cn-tag">CPAP</span>
+            <span class="cn-tag">Follow-up</span>
+            <span class="cn-tag">AHI Improvement</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="../js/global.js"></script>
+<script src="../js/clinical-notes.js"></script>
+</body>
+</html>

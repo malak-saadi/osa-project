@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════
+   clinical-notes.css
+   ═══════════════════════════════════════ */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cn-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 16px;
+  animation: fadeUp .4s ease both;
+}
+
+/* Toolbar */
+.cn-toolbar {
+  display: flex; gap: 10px; margin-bottom: 14px;
+}
+.cn-search {
+  flex: 1; height: 38px;
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 0 12px; font-family: inherit; font-size: 13px;
+  outline: none; color: var(--text); background: #fff;
+}
+.cn-search:focus { border-color: var(--accent); }
+
+/* Notes List */
+.cn-notes-list { display: flex; flex-direction: column; gap: 8px; }
+
+.cn-note-item {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px;
+  cursor: pointer; transition: border-color .15s, box-shadow .15s;
+}
+.cn-note-item:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+.cn-note-item.active { border-color: var(--accent); background: var(--accent-light); }
+
+.cn-note-date  { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+.cn-note-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.cn-note-preview { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cn-note-tag {
+  display: inline-block; margin-top: 8px;
+  font-size: 11px; font-weight: 600;
+  padding: 2px 8px; border-radius: 4px;
+  background: var(--accent-light); color: var(--accent);
+}
+
+/* Note Detail */
+.cn-detail {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.cn-detail-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 20px; padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.cn-detail-title { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+.cn-detail-meta  { font-size: 13px; color: var(--muted); }
+
+.cn-detail-actions { display: flex; gap: 8px; }
+
+.btn-outline {
+  padding: 7px 14px; border-radius: 8px;
+  border: 1px solid var(--border); background: #fff;
+  font-family: inherit; font-size: 13px; font-weight: 600;
+  color: var(--text); cursor: pointer; transition: background .15s;
+}
+.btn-outline:hover { background: var(--bg); }
+.danger-outline { border-color: #fecaca; color: var(--red); }
+.danger-outline:hover { background: var(--red-light); }
+
+.cn-detail-body {
+  font-size: 14px; line-height: 1.8; color: var(--text);
+  white-space: pre-wrap; margin-bottom: 20px;
+}
+
+.cn-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.cn-tag {
+  font-size: 12px; font-weight: 600;
+  padding: 4px 10px; border-radius: 6px;
+  background: var(--bg); color: var(--muted);
+  border: 1px solid var(--border);
+}

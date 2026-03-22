@@ -1,0 +1,17 @@
+# Ignore dataset folder
+data/
+
+# Ignore specific file types
+*.npy
+*.apn
+*.xws
+*.hae
+*.qrs
+*.dat
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/

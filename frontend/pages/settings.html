@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings – OSA Monitor</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-icon">♥</div>
+    <div class="brand-text">
+      <div class="brand-name">OSA Monitor</div>
+      <div class="brand-sub">Sleep Analytics v2.4</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <a class="nav-item" href="dashboard.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Dashboard
+    </a>
+    <a class="nav-item" href="apnea-detection.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Apnea Detection
+    </a>
+    <a class="nav-item" href="sleep-history.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Sleep History
+    </a>
+    <a class="nav-item" href="patient-profile.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      Patient Profile
+    </a>
+    <a class="nav-item active" href="settings.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      Settings
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <button class="export-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Export Data
+    </button>
+  </div>
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<div class="main">
+
+  <header class="topbar">
+    <div class="topbar-title">Settings</div>
+    <div class="ml-auto">
+      <a href="patient-profile.html" class="avatar">JD</a>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <div class="settings-layout">
+
+      <!-- ── LEFT : Settings Menu ── -->
+      <div class="settings-menu">
+        <div class="menu-item active" data-section="profile">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          Profile
+        </div>
+        <div class="menu-item" data-section="appearance">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20"/></svg>
+          Appearance
+        </div>
+        <div class="menu-item" data-section="notifications">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          Notifications
+        </div>
+        <div class="menu-item" data-section="alerts">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+          Alert Thresholds
+        </div>
+        <div class="menu-item" data-section="data">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          Data & Privacy
+        </div>
+        <div class="menu-item" data-section="devices">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          Connected Devices
+        </div>
+        <div class="menu-item" data-section="security">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Security
+        </div>
+        <div class="menu-item" data-section="about">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          About
+        </div>
+      </div>
+
+      <!-- ── RIGHT : Section Content ── -->
+      <div class="settings-content">
+
+        <!-- ─ PROFILE ─ -->
+        <div class="section active" id="section-profile">
+          <div class="section-title">Profile</div>
+          <div class="section-desc">Manage your personal and professional information.</div>
+
+          <div class="profile-photo-row">
+            <div class="photo-avatar">JD</div>
+            <div>
+              <div class="photo-name">Dr. Sarah Chen</div>
+              <div class="photo-role">Sleep Specialist • OSA Monitor v2.4</div>
+            </div>
+            <button class="btn-outline" style="margin-left:auto">Change Photo</button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" class="form-input" value="Sarah">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-input" value="Chen">
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" class="form-input" value="s.chen@hospital.com">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" class="form-input" value="+1 (555) 987-6543">
+            </div>
+            <div class="form-group">
+              <label>Specialization</label>
+              <input type="text" class="form-input" value="Sleep Medicine">
+            </div>
+            <div class="form-group">
+              <label>Hospital / Clinic</label>
+              <input type="text" class="form-input" value="City General Hospital">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-outline">Cancel</button>
+            <button class="btn-primary save-btn">Save Changes</button>
+          </div>
+        </div>
+
+        <!-- ─ APPEARANCE ─ -->
+        <div class="section" id="section-appearance">
+          <div class="section-title">Appearance</div>
+          <div class="section-desc">Customize how OSA Monitor looks for you.</div>
+
+          <div class="setting-block">
+            <div class="block-title">Theme</div>
+            <div class="theme-options">
+              <div class="theme-card active" data-theme="light">
+                <div class="theme-preview light-preview"></div>
+                <span>Light</span>
+              </div>
+              <div class="theme-card" data-theme="dark">
+                <div class="theme-preview dark-preview"></div>
+                <span>Dark</span>
+              </div>
+              <div class="theme-card" data-theme="auto">
+                <div class="theme-preview auto-preview"></div>
+                <span>System</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="setting-block">
+            <div class="block-title">Language</div>
+            <select class="form-input" style="max-width:240px">
+              <option>English (US)</option>
+              <option>Français</option>
+              <option>العربية</option>
+              <option>Español</option>
+            </select>
+          </div>
+
+          <div class="setting-block">
+            <div class="block-title">Units</div>
+            <div class="radio-group">
+              <label class="radio-item">
+                <input type="radio" name="units" checked> Imperial (°F, lbs)
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="units"> Metric (°C, kg)
+              </label>
+            </div>
+          </div>
+
+          <div class="setting-block">
+            <div class="block-title">Date Format</div>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="date" checked> MM/DD/YYYY</label>
+              <label class="radio-item"><input type="radio" name="date"> DD/MM/YYYY</label>
+              <label class="radio-item"><input type="radio" name="date"> YYYY-MM-DD</label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-primary save-btn">Save Preferences</button>
+          </div>
+        </div>
+
+        <!-- ─ NOTIFICATIONS ─ -->
+        <div class="section" id="section-notifications">
+          <div class="section-title">Notifications</div>
+          <div class="section-desc">Control which alerts and updates you receive.</div>
+
+          <div class="notif-group">
+            <div class="group-title">Clinical Alerts</div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Critical AHI Events</div><div class="toggle-desc">Notify immediately when AHI exceeds 15</div></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">SpO2 Drop Alerts</div><div class="toggle-desc">Alert when oxygen drops below 90%</div></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Device Disconnection</div><div class="toggle-desc">Alert when bracelet loses connection</div></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+          </div>
+
+          <div class="notif-group">
+            <div class="group-title">Reports & Summaries</div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Daily Summary Email</div><div class="toggle-desc">Receive a nightly session summary</div></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Weekly Report</div><div class="toggle-desc">Weekly trends sent every Monday</div></div>
+              <div class="toggle" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Monthly Analytics</div><div class="toggle-desc">Detailed monthly breakdown</div></div>
+              <div class="toggle" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+          </div>
+
+          <div class="notif-group">
+            <div class="group-title">System</div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Software Updates</div><div class="toggle-desc">Notify when new versions are available</div></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Maintenance Reminders</div><div class="toggle-desc">Device cleaning and calibration alerts</div></div>
+              <div class="toggle" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─ ALERT THRESHOLDS ─ -->
+        <div class="section" id="section-alerts">
+          <div class="section-title">Alert Thresholds</div>
+          <div class="section-desc">Set custom limits that trigger clinical notifications.</div>
+
+          <div class="threshold-list" id="thresholdList"></div>
+          <div class="form-actions">
+            <button class="btn-outline" id="resetThresholds">Reset to Defaults</button>
+            <button class="btn-primary save-btn">Save Thresholds</button>
+          </div>
+        </div>
+
+        <!-- ─ DATA & PRIVACY ─ -->
+        <div class="section" id="section-data">
+          <div class="section-title">Data & Privacy</div>
+          <div class="section-desc">Control how your data is stored, shared, and used.</div>
+
+          <div class="notif-group">
+            <div class="group-title">Data Sharing</div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Share with Physician</div><div class="toggle-desc">Auto-share session data with assigned doctor</div></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Anonymous Research Data</div><div class="toggle-desc">Contribute anonymized data to sleep research</div></div>
+              <div class="toggle" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><div class="toggle-name">Family Sharing</div><div class="toggle-desc">Allow family members to view health data</div></div>
+              <div class="toggle" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+          </div>
+
+          <div class="notif-group">
+            <div class="group-title">Data Retention</div>
+            <div class="setting-block" style="margin-top:0">
+              <label style="font-size:13px;font-weight:500;color:var(--muted)">Keep session data for</label>
+              <select class="form-input" style="max-width:200px;margin-top:8px">
+                <option>6 months</option>
+                <option selected>1 year</option>
+                <option>2 years</option>
+                <option>Forever</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="data-actions">
+            <button class="btn-outline">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Export All Data
+            </button>
+            <button class="btn-danger-outline">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg>
+              Delete All Data
+            </button>
+          </div>
+        </div>
+
+        <!-- ─ CONNECTED DEVICES ─ -->
+        <div class="section" id="section-devices">
+          <div class="section-title">Connected Devices</div>
+          <div class="section-desc">Manage your paired wearables and monitoring equipment.</div>
+
+          <div class="device-list" id="deviceList"></div>
+
+          <button class="btn-add-device">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Pair New Device
+          </button>
+        </div>
+
+        <!-- ─ SECURITY ─ -->
+        <div class="section" id="section-security">
+          <div class="section-title">Security</div>
+          <div class="section-desc">Manage your login credentials and access settings.</div>
+
+          <div class="setting-block">
+            <div class="block-title">Change Password</div>
+            <div class="form-grid" style="max-width:480px">
+              <div class="form-group" style="grid-column:1/-1">
+                <label>Current Password</label>
+                <input type="password" class="form-input" placeholder="••••••••">
+              </div>
+              <div class="form-group">
+                <label>New Password</label>
+                <input type="password" class="form-input" placeholder="••••••••" id="newPass">
+              </div>
+              <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-input" placeholder="••••••••" id="confirmPass">
+              </div>
+            </div>
+            <div class="form-actions" style="margin-top:12px">
+              <button class="btn-primary" id="updatePassBtn">Update Password</button>
+            </div>
+          </div>
+
+          <div class="setting-block">
+            <div class="block-title">Two-Factor Authentication</div>
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <div class="toggle-name">Enable 2FA</div>
+                <div class="toggle-desc">Add an extra layer of security to your account</div>
+              </div>
+              <div class="toggle" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+            </div>
+          </div>
+
+          <div class="setting-block">
+            <div class="block-title">Active Sessions</div>
+            <div class="session-list" id="sessionList"></div>
+          </div>
+        </div>
+
+        <!-- ─ ABOUT ─ -->
+        <div class="section" id="section-about">
+          <div class="section-title">About OSA Monitor</div>
+          <div class="section-desc">Application information and legal details.</div>
+
+          <div class="about-card">
+            <div class="about-logo">♥</div>
+            <div class="about-app-name">OSA Monitor</div>
+            <div class="about-version">Version 2.4.1 (Build 2024.10.26)</div>
+          </div>
+
+          <div class="about-list">
+            <div class="about-row"><span>Developer</span><span>OSA Health Technologies</span></div>
+            <div class="about-row"><span>Platform</span><span>Web Application</span></div>
+            <div class="about-row"><span>Last Updated</span><span>October 26, 2023</span></div>
+            <div class="about-row"><span>License</span><span>Medical Grade – HIPAA Compliant</span></div>
+            <div class="about-row"><span>Encryption</span><span>AES-256</span></div>
+          </div>
+
+          <div class="about-links">
+            <a href="#" class="about-link">Privacy Policy</a>
+            <a href="#" class="about-link">Terms of Service</a>
+            <a href="#" class="about-link">Contact Support</a>
+            <a href="#" class="about-link">Check for Updates</a>
+          </div>
+        </div>
+
+      </div><!-- /settings-content -->
+    </div><!-- /settings-layout -->
+
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="save-toast" id="toast"></div>
+
+<script src="../js/global.js"></script>
+<script src="../js/settings.js"></script>
+</body>
+</html>

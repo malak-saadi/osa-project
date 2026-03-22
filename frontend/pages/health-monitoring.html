@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Monitoring – OSA Monitor</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/patient-profile.css">
+  <link rel="stylesheet" href="../css/health-monitoring.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-icon">♥</div>
+    <div class="brand-text">
+      <div class="brand-name">OSA Monitor</div>
+      <div class="brand-sub">Sleep Analytics v2.4</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <a class="nav-item" href="dashboard.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Dashboard
+    </a>
+    <a class="nav-item" href="apnea-detection.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Apnea Detection
+    </a>
+    <a class="nav-item" href="sleep-history.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Sleep History
+    </a>
+    <a class="nav-item active" href="patient-profile.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      Patient Profile
+    </a>
+    <a class="nav-item" href="settings.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      Settings
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <button class="export-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Export Data
+    </button>
+  </div>
+</aside>
+
+<div class="main">
+  <header class="topbar">
+    <div class="breadcrumb">
+      <a href="patient-profile.html" class="bc-link">Patients List</a>
+      <span class="bc-sep">›</span>
+      <span class="bc-current">Johnathan Doe</span>
+    </div>
+    <div class="ml-auto">
+      <div class="avatar">JD</div>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <!-- Patient Header -->
+    <div class="patient-header">
+      <div class="patient-info">
+        <div class="patient-avatar">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <div class="patient-details">
+          <div class="patient-name-row">
+            <h1 class="patient-name">Johnathan Doe</h1>
+            <span class="active-badge">ACTIVE</span>
+          </div>
+          <div class="patient-meta">
+            <span>ID: #88291-JD</span>
+            <span>Sleep Apnea Type II</span>
+          </div>
+          <div class="patient-sub">Last clinical visit: Oct 24, 2023 • Managed by Dr. Sarah Chen</div>
+        </div>
+      </div>
+      <div class="patient-actions">
+        <button class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+          Export Medical Report
+        </button>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" onclick="location.href='health-monitoring.html'">Health Monitoring</button>
+      <button class="tab" onclick="location.href='patient-profile.html'">Device Sync</button>
+      <button class="tab" onclick="location.href='clinical-notes.html'">Clinical Notes</button>
+      <button class="tab" onclick="location.href='account-settings.html'">Account Settings</button>
+    </div>
+
+    <!-- Content -->
+    <div class="hm-grid">
+
+      <!-- Vital Signs -->
+      <div class="hm-card">
+        <div class="hm-card-header">
+          <h3 class="hm-card-title">Vital Signs</h3>
+          <span class="live-badge"><span class="live-dot"></span> Live</span>
+        </div>
+        <div class="vitals-grid">
+          <div class="vital-item">
+            <div class="vital-icon red">❤️</div>
+            <div class="vital-label">Heart Rate</div>
+            <div class="vital-value">72 <span>BPM</span></div>
+            <div class="vital-status normal">Normal</div>
+          </div>
+          <div class="vital-item">
+            <div class="vital-icon blue">💧</div>
+            <div class="vital-label">SpO2</div>
+            <div class="vital-value">98 <span>%</span></div>
+            <div class="vital-status normal">Normal</div>
+          </div>
+          <div class="vital-item">
+            <div class="vital-icon green">🌬️</div>
+            <div class="vital-label">Respiration</div>
+            <div class="vital-value">14 <span>BrPM</span></div>
+            <div class="vital-status normal">Stable</div>
+          </div>
+          <div class="vital-item">
+            <div class="vital-icon orange">🌡️</div>
+            <div class="vital-label">Temperature</div>
+            <div class="vital-value">98.6 <span>°F</span></div>
+            <div class="vital-status normal">Normal</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sleep Quality Trend -->
+      <div class="hm-card">
+        <div class="hm-card-header">
+          <h3 class="hm-card-title">Sleep Quality Trend</h3>
+          <select class="period-select">
+            <option>Last 7 Days</option>
+            <option>Last 30 Days</option>
+          </select>
+        </div>
+        <canvas id="trendChart" height="120"></canvas>
+      </div>
+
+      <!-- AHI History -->
+      <div class="hm-card">
+        <div class="hm-card-header">
+          <h3 class="hm-card-title">AHI Score History</h3>
+        </div>
+        <div class="ahi-list" id="ahiList"></div>
+      </div>
+
+      <!-- Oxygen Saturation -->
+      <div class="hm-card">
+        <div class="hm-card-header">
+          <h3 class="hm-card-title">Oxygen Saturation</h3>
+          <span class="avg-badge">Avg: 96.8%</span>
+        </div>
+        <canvas id="spo2Chart" height="120"></canvas>
+        <div class="spo2-legend">
+          <span class="legend-dot-inline" style="background:#2563eb"></span> SpO2 %
+          <span class="legend-dot-inline" style="background:#dc2626;margin-left:12px"></span> Critical threshold (90%)
+        </div>
+      </div>
+
+      <!-- Alerts Summary -->
+      <div class="hm-card full-width">
+        <div class="hm-card-header">
+          <h3 class="hm-card-title">Recent Health Alerts</h3>
+          <a href="apnea-detection.html" class="view-all-link">View all →</a>
+        </div>
+        <div class="alert-list" id="alertList"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="../js/global.js"></script>
+<script src="../js/health-monitoring.js"></script>
+</body>
+</html>

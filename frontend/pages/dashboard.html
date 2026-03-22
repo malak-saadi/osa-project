@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSA Monitor – Dashboard</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-icon">♥</div>
+    <div class="brand-text">
+      <div class="brand-name">OSA Monitor</div>
+      <div class="brand-sub">Sleep Analytics v2.4</div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a class="nav-item active" href="dashboard.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Dashboard
+    </a>
+    <a class="nav-item" href="apnea-detection.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Apnea Detection
+    </a>
+    <a class="nav-item" href="sleep-history.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Sleep History
+    </a>
+    <a class="nav-item" href="patient-profile.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      Patient Profile
+    </a>
+    <a class="nav-item" href="settings.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      Settings
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <button class="export-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Export Data
+    </button>
+  </div>
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<div class="main">
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="topbar-title">
+      Patient Monitoring
+      <span class="live-badge"><span class="live-dot"></span> LIVE CONNECTED</span>
+    </div>
+    <div class="topbar-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Search clinical logs…">
+    </div>
+    <div class="ml-auto">
+      <button class="report-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Medical Report
+      </button>
+      <a href="patient-profile.html" class="avatar">JD</a>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="content">
+
+    <div class="page-header">
+      <h1 class="page-title">OSA Analytics Dashboard</h1>
+      <p class="page-sub">Real-time physiological data for Patient ID: <span class="pid">#8829-X</span></p>
+    </div>
+
+    <!-- Stat Cards -->
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Heart Rate</span>
+          <div class="stat-icon icon-red">❤️</div>
+        </div>
+        <div class="stat-value">72 <span>BPM</span></div>
+        <span class="stat-badge badge-green">↑ 2% vs average</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">SpO2 Level</span>
+          <div class="stat-icon icon-blue">💧</div>
+        </div>
+        <div class="stat-value">98 <span>%</span></div>
+        <span class="stat-badge badge-red">↓ 1% drop detected</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Respiration</span>
+          <div class="stat-icon icon-green">🌬️</div>
+        </div>
+        <div class="stat-value">14 <span>BrPM</span></div>
+        <span class="stat-badge badge-gray">– Stable</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Body Temp</span>
+          <div class="stat-icon icon-orange">🌡️</div>
+        </div>
+        <div class="stat-value">98.6 <span>°F</span></div>
+        <span class="stat-badge badge-green">✓ Normal</span>
+      </div>
+    </div>
+
+    <!-- Middle -->
+    <div class="mid-grid">
+      <!-- ECG -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Real-time ECG Waveform</div>
+            <div class="card-sub">Live Lead II visualization</div>
+          </div>
+          <div class="ecg-controls">
+            <button class="ecg-btn">10mm/mV</button>
+            <button class="ecg-btn">25mm/s</button>
+          </div>
+        </div>
+        <canvas id="ecgCanvas"></canvas>
+        <div class="ecg-time">
+          <span>-55</span><span>-45</span><span>-35</span><span>-25</span><span>-15</span>
+          <span class="ecg-now">NOW</span>
+        </div>
+      </div>
+
+      <!-- OSA Risk -->
+      <div class="card osa-card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">OSA Risk Level</div>
+            <div class="card-sub">AI-calculated apnea probability</div>
+          </div>
+        </div>
+        <div class="osa-body">
+          <div class="donut-wrap">
+            <canvas id="donutCanvas"></canvas>
+            <div class="donut-label">
+              <div class="donut-pct">24%</div>
+              <div class="donut-risk">LOW RISK</div>
+            </div>
+          </div>
+          <div style="width:100%">
+            <div class="ahi-row">
+              <span class="ahi-label">Apnea-Hypopnea Index (AHI)</span>
+              <span class="ahi-value">4.2</span>
+            </div>
+            <div class="ahi-bar-bg"><div class="ahi-bar-fill" id="ahiBar"></div></div>
+          </div>
+          <p class="osa-note">
+            "Current metrics indicate normal sleep patterns. No immediate clinical intervention required."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Episodes Table -->
+    <div class="card episodes-card">
+      <div class="ep-header">
+        <div class="card-title">Recent Sleep Episodes</div>
+        <a href="sleep-history.html" class="view-link">View Full History →</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time Range</th>
+            <th>Status</th>
+            <th>Avg SpO2</th>
+            <th>Apnea Events</th>
+            <th>Duration</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="episodesBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<script src="../js/global.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

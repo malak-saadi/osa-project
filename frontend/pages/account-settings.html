@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account Settings – OSA Monitor</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/patient-profile.css">
+  <link rel="stylesheet" href="../css/account-settings.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-icon">♥</div>
+    <div class="brand-text">
+      <div class="brand-name">OSA Monitor</div>
+      <div class="brand-sub">Sleep Analytics v2.4</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <a class="nav-item" href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a>
+    <a class="nav-item" href="apnea-detection.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Apnea Detection</a>
+    <a class="nav-item" href="sleep-history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Sleep History</a>
+    <a class="nav-item active" href="patient-profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>Patient Profile</a>
+    <a class="nav-item" href="settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+  </nav>
+  <div class="sidebar-footer">
+    <button class="export-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Export Data</button>
+  </div>
+</aside>
+
+<div class="main">
+  <header class="topbar">
+    <div class="breadcrumb">
+      <a href="patient-profile.html" class="bc-link">Patients List</a>
+      <span class="bc-sep">›</span>
+      <span class="bc-current">Johnathan Doe</span>
+    </div>
+    <div class="ml-auto"><div class="avatar">JD</div></div>
+  </header>
+
+  <div class="content">
+
+    <!-- Patient Header -->
+    <div class="patient-header">
+      <div class="patient-info">
+        <div class="patient-avatar">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <div class="patient-details">
+          <div class="patient-name-row">
+            <h1 class="patient-name">Johnathan Doe</h1>
+            <span class="active-badge">ACTIVE</span>
+          </div>
+          <div class="patient-meta"><span>ID: #88291-JD</span><span>Sleep Apnea Type II</span></div>
+          <div class="patient-sub">Last clinical visit: Oct 24, 2023 • Managed by Dr. Sarah Chen</div>
+        </div>
+      </div>
+      <div class="patient-actions">
+        <button class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+          Export Medical Report
+        </button>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab" onclick="location.href='health-monitoring.html'">Health Monitoring</button>
+      <button class="tab" onclick="location.href='patient-profile.html'">Device Sync</button>
+      <button class="tab" onclick="location.href='clinical-notes.html'">Clinical Notes</button>
+      <button class="tab active">Account Settings</button>
+    </div>
+
+    <!-- Content -->
+    <div class="as-grid">
+
+      <!-- Personal Information -->
+      <div class="as-card">
+        <div class="as-section-title">Personal Information</div>
+        <div class="as-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" value="Johnathan" class="form-input">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" value="Doe" class="form-input">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Date of Birth</label>
+              <input type="date" value="1978-03-15" class="form-input">
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <select class="form-input">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" value="j.doe@hospital.com" class="form-input">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" value="+1 (555) 234-5678" class="form-input">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-outline">Cancel</button>
+            <button class="btn-primary" id="savePersonal">Save Changes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medical Information -->
+      <div class="as-card">
+        <div class="as-section-title">Medical Information</div>
+        <div class="as-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Diagnosis</label>
+              <input type="text" value="Sleep Apnea Type II" class="form-input">
+            </div>
+            <div class="form-group">
+              <label>Severity</label>
+              <select class="form-input">
+                <option>Mild</option>
+                <option selected>Moderate</option>
+                <option>Severe</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Assigned Physician</label>
+              <input type="text" value="Dr. Sarah Chen" class="form-input">
+            </div>
+            <div class="form-group">
+              <label>Insurance ID</label>
+              <input type="text" value="INS-44821-JD" class="form-input">
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>Medical Notes</label>
+            <textarea class="form-textarea" rows="3">Patient has been compliant with CPAP therapy. No significant comorbidities noted.</textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn-outline">Cancel</button>
+            <button class="btn-primary">Save Changes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notification Preferences -->
+      <div class="as-card">
+        <div class="as-section-title">Notification Preferences</div>
+        <div class="notif-list">
+          <div class="notif-row">
+            <div class="notif-info">
+              <div class="notif-name">Critical AHI Alerts</div>
+              <div class="notif-desc">Notify when AHI exceeds threshold</div>
+            </div>
+            <div class="toggle on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+          </div>
+          <div class="notif-row">
+            <div class="notif-info">
+              <div class="notif-name">Weekly Report Email</div>
+              <div class="notif-desc">Receive weekly summary via email</div>
+            </div>
+            <div class="toggle on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+          </div>
+          <div class="notif-row">
+            <div class="notif-info">
+              <div class="notif-name">Device Disconnection</div>
+              <div class="notif-desc">Alert when bracelet loses connection</div>
+            </div>
+            <div class="toggle on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+          </div>
+          <div class="notif-row">
+            <div class="notif-info">
+              <div class="notif-name">Family Sharing Updates</div>
+              <div class="notif-desc">Notify family when data is shared</div>
+            </div>
+            <div class="toggle" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="as-card">
+        <div class="as-section-title">Security</div>
+        <div class="as-form">
+          <div class="form-group full">
+            <label>Current Password</label>
+            <input type="password" placeholder="••••••••" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>New Password</label>
+              <input type="password" placeholder="••••••••" class="form-input">
+            </div>
+            <div class="form-group">
+              <label>Confirm Password</label>
+              <input type="password" placeholder="••••••••" class="form-input">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-primary" id="savePassword">Update Password</button>
+          </div>
+        </div>
+        <div class="danger-zone">
+          <div class="danger-title">Danger Zone</div>
+          <div class="danger-row">
+            <div>
+              <div class="danger-name">Deactivate Account</div>
+              <div class="danger-desc">Temporarily disable this patient account</div>
+            </div>
+            <button class="btn-danger-outline">Deactivate</button>
+          </div>
+          <div class="danger-row">
+            <div>
+              <div class="danger-name">Delete Account</div>
+              <div class="danger-desc">Permanently delete all patient data</div>
+            </div>
+            <button class="btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="../js/global.js"></script>
+<script src="../js/account-settings.js"></script>
+</body>
+</html>
