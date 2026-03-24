@@ -39,7 +39,7 @@ def train_model(model, train_loader, val_loader, epochs=5, lr=1e-3):
         train_loss = 0.0
         for ecg_b, lbl_b in train_loader:
             ecg_b = ecg_b.to(device)
-            lbl_b = lbl_b.to(device)
+            lbl_b = lbl_b.float().to(device)
             optimizer.zero_grad()
             pred = model(ecg_b).squeeze()
             loss = criterion(pred, lbl_b)
