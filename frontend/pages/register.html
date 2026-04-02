@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Azure - Register</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="register-page">
+    <div class="page-background"></div>
+    
+    <div class="container register-container">
+        <div class="register-wrapper">
+            <div class="register-sidebar">
+                <div class="sidebar-content">
+                    <div class="sidebar-logo">
+                        <svg width="48" height="48" viewBox="0 0 64 64" fill="none">
+                            <rect width="64" height="64" rx="16" fill="#0052CC"/>
+                            <path d="M32 16L28 44M32 16L36 44M20 28L44 28M20 40L44 40" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h2 class="sidebar-title">Vital Azure</h2>
+                    
+                    <h3 class="sidebar-heading">Advance your clinical monitoring journey.</h3>
+                    
+                    <p class="sidebar-text">Access real-time sleep diagnostics and patient health metrics with medical-grade precision.</p>
+
+                    <div class="security-box">
+                        <div class="security-icon">🛡️</div>
+                        <div class="security-content">
+                            <span class="security-label">SECURITY PROTOCOL</span>
+                            <span class="security-highlight">HIPAA</span>
+                            <span class="security-status">Compliant Data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-form-card">
+                <h2 class="form-title">Join Vital Azure</h2>
+                <p class="form-description">Create your professional medical account</p>
+
+                <form id="registerForm" class="form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="username" class="form-label">USERNAME</label>
+                            <div class="input-group">
+                                <span class="input-icon">👤</span>
+                                <input 
+                                    type="text" 
+                                    id="username" 
+                                    name="username" 
+                                    class="form-input"
+                                    placeholder="j.smith"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role" class="form-label">ROLE SELECTION</label>
+                            <div class="input-group">
+                                <span class="input-icon">👨‍⚕️</span>
+                                <select id="role" name="role" class="form-input form-select" required>
+                                    <option value="">Select your role</option>
+                                    <option value="clinician">Clinician</option>
+                                    <option value="doctor">Doctor</option>
+                                    <option value="specialist">Specialist</option>
+                                    <option value="nurse">Nurse</option>
+                                    <option value="technician">Technician</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">EMAIL ADDRESS</label>
+                        <div class="input-group">
+                            <span class="input-icon">✉️</span>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input"
+                                placeholder="professional@medical.com"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone" class="form-label">TELEPHONE</label>
+                        <div class="input-group">
+                            <span class="input-icon">☎️</span>
+                            <input 
+                                type="tel" 
+                                id="telephone" 
+                                name="telephone" 
+                                class="form-input"
+                                placeholder="+1 (555) 000-0000"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password" class="form-label">PASSWORD</label>
+                            <div class="input-group">
+                                <span class="input-icon">🔒</span>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    class="form-input"
+                                    placeholder="••••••••"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword" class="form-label">CONFIRM PASSWORD</label>
+                            <div class="input-group">
+                                <span class="input-icon">🔐</span>
+                                <input 
+                                    type="password" 
+                                    id="confirmPassword" 
+                                    name="confirmPassword" 
+                                    class="form-input"
+                                    placeholder="••••••••"
+                                    required
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Register Account →</button>
+                </form>
+
+                <p class="form-footer">
+                    Already have an account? <a href="login.html" class="link-signin">Sign In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="footer-content">
+            <p class="footer-copyright">© 2026 VITAL AZURE CLINICAL MONITORING. ALL RIGHTS RESERVED.</p>
+            <div class="footer-links">
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF SERVICE</a>
+                <a href="#">SUPPORT</a>
+                <a href="#">MEDICAL DISCLAIMER</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

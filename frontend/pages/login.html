@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Azure - Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="login-page">
+    <div class="page-background"></div>
+    
+    <div class="container login-container">
+        <div class="logo-section">
+            <div class="logo-icon">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                    <rect width="64" height="64" rx="16" fill="#0052CC"/>
+                    <path d="M32 16L28 44M32 16L36 44M20 28L44 28M20 40L44 40" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h1 class="logo-title">Vital Azure</h1>
+            <p class="logo-subtitle">CLINICAL MONITORING PORTAL</p>
+        </div>
+
+        <div class="login-form-card">
+            <h2 class="form-title">Vital Azure Login</h2>
+            <p class="form-description">Access your secure clinical dashboard</p>
+
+            <form id="loginForm" class="form">
+                <div class="form-group">
+                    <label for="username" class="form-label">USERNAME</label>
+                    <div class="input-group">
+                        <span class="input-icon">👤</span>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            class="form-input"
+                            placeholder="Enter clinical ID"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-row">
+                        <label for="password" class="form-label">PASSWORD</label>
+                        <a href="#" class="forgot-password">FORGOT?</a>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-icon">🔒</span>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-input"
+                            placeholder="••••••••"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign in to Dashboard</button>
+            </form>
+
+            <div class="hipaa-badge">
+                <span class="badge-icon">🛡️</span>
+                <span class="badge-text">HIPAA COMPLIANT SECURE SESSION</span>
+            </div>
+
+            <p class="form-footer">
+                Don't have clinical access? <a href="register.html" class="link-signup">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3 class="footer-brand">Vital Azure</h3>
+                <p class="footer-description">ADVANCED CLINICAL MONITORING SYSTEMS<br>FOR RESTFUL PATIENT RECOVERY AND SLEEP<br>DIAGNOSTICS.</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-copyright">© 2026 VITAL AZURE CLINICAL MONITORING. ALL RIGHTS RESERVED.</p>
+                <div class="footer-links">
+                    <a href="#">PRIVACY POLICY</a>
+                    <a href="#">TERMS OF SERVICE</a>
+                    <a href="#">SUPPORT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
